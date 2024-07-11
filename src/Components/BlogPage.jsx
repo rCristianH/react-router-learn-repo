@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function BlogPage() {
   return(
     <>
       <h2>Blog Post</h2>
+
+      <Outlet/>
+
       <ul>
         {blogdata.map(post=>(
           <BlogLink key={post.slug} post={post}/>
