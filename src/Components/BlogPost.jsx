@@ -7,13 +7,15 @@ const BlogPost = () => {
 
   const post = blogdata.find((post) => post.slug === slug);
   const returnToBlog = () => {
-    navigate('/blog');
+    navigate("/blog");
   };
   return (
     <>
-      <h2>{post.title}</h2>
-      <button onClick={returnToBlog}>Return to blog</button>
-      <p>{post.content}</p>
+      <h2 className="blog-post-h2">{post.title}</h2>
+      <button className="blog-post-btn" onClick={returnToBlog}>
+        Return to blog
+      </button>
+      <p className="blog-post-">{post.content}</p>
     </>
   );
 };

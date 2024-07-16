@@ -7,7 +7,7 @@ function BlogPage() {
 
       <Outlet/>
 
-      <ul>
+      <ul className="post">
         {blogdata.map(post=>(
           <BlogLink key={post.slug} post={post}/>
         ))}
