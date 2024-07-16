@@ -1,6 +1,6 @@
 
 function HomePage() {
-  return <p>HomePage</p>;
+  return <h2>HomePage</h2>;
 }
 
 export { HomePage };

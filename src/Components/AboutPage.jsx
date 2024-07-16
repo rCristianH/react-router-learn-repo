@@ -1,6 +1,6 @@
 
 function AboutPage() {
-  return <p>About Page</p>;
+  return <h2>About Page</h2>;
 }
 
 export { AboutPage };

@@ -13,6 +13,12 @@ const Menu = () => {
         <li>
           <NavLink to="/about">About</NavLink>
         </li>
+        <li>
+          <NavLink to="/Login">Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Logout">Logout</NavLink>
+        </li>
       </ul>
     </nav>
   );
