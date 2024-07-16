@@ -11,7 +11,7 @@ const Login = () => {
   return (
     <>
       <h2>Login</h2>
-      <form onSubmit={login}>
+      <form className="logout" onSubmit={login}>
         <label>Username:</label>
         <input value={username} onChange={(e) => setUsername(e.target.value)} />
         <button type="submit">LogIn</button>
