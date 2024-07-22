@@ -15,31 +15,33 @@ const App = () => {
       <HashRouter>
         <AuthProvider>
           <Menu />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/blog" element={<BlogPage />}>
-              <Route path=":slug" element={<BlogPost />} />
-            </Route>
-            <Route path="/login" element={<Login />} />
-            <Route
-              path="/logout"
-              element={
-                <AuthRoute>
-                  <Logout />
-                </AuthRoute>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <AuthRoute>
-                  <AboutPage />
-                </AuthRoute>
-              }
-            />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="main">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/blog" element={<BlogPage />}>
+                <Route path=":slug" element={<BlogPost />} />
+              </Route>
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/logout"
+                element={
+                  <AuthRoute>
+                    <Logout />
+                  </AuthRoute>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <AuthRoute>
+                    <AboutPage />
+                  </AuthRoute>
+                }
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
         </AuthProvider>
       </HashRouter>
     </>

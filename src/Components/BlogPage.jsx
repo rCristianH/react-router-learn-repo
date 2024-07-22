@@ -25,14 +25,22 @@ const BlogLink = ({post}) => {
 }
 const blogdata = []
 blogdata.push({
-  title: "what",
-  slug: "aeo",
-  content: "lorem ipusp ame dolor"
+  title: "What?",
+  slug: "what",
+  author: "redhd01",
+  content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem possimus reiciendis esse quo placeat natus iste illum laboriosam expedita explicabo."
 })
 blogdata.push({
-  title: "whataoe",
-  slug: "aeoaoe",
-  content: "lorem ipusp ame dolor 2"
+  title: "Where?",
+  slug: "where",
+  author: "charlie",
+  content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem possimus reiciendis esse quo placeat natus iste illum laboriosam expedita explicabo ipisicing elit. Dolorem possimus reiciendis esse quo placeat natus iste illum laboriosam expedita explica."
+})
+blogdata.push({
+  title: "How?",
+  slug: "how",
+  author: "ccrhd",
+  content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam recusandae quisquam dignissimos, error corporis necessitatibus. Et porro quos harum quisquam consectetur voluptatem, unde nesciunt quia ducimus expedita dolorem possimus molestiae."
 })
 
 export { BlogPage, blogdata};
