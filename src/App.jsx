@@ -7,7 +7,7 @@ import { NotFound } from "./Components/NotFound";
 import { BlogPost } from "./Components/BlogPost";
 import { Login } from "./Components/auth/login";
 import { Logout } from "./Components/auth/logout";
-import { AuthProvider, useAuth } from "./Components/auth/auth";
+import { AuthProvider, AuthRoute } from "./Components/auth/auth";
 
 const App = () => {
   return (
@@ -22,8 +22,22 @@ const App = () => {
               <Route path=":slug" element={<BlogPost />} />
             </Route>
             <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/about" element={<AboutPage />} />
+            <Route
+              path="/logout"
+              element={
+                <AuthRoute>
+                  <Logout />
+                </AuthRoute>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <AuthRoute>
+                  <AboutPage />
+                </AuthRoute>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
