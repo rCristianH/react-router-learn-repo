@@ -8,6 +8,7 @@ import { BlogPost } from "./Components/BlogPost";
 import { Login } from "./Components/auth/login";
 import { Logout } from "./Components/auth/logout";
 import { AuthProvider, AuthRoute } from "./Components/auth/auth";
+import { Users } from "./Components/Users/Users";
 
 const App = () => {
   return (
@@ -38,7 +39,10 @@ const App = () => {
                     <AboutPage />
                   </AuthRoute>
                 }
-              />
+              >
+                <Route path=":username" element={<Users />} />
+              </Route>
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
